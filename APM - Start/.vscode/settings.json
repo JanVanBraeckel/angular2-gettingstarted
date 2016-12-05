@@ -2,8 +2,16 @@
 {
     "files.exclude": {
         "**/.git": true,
-        "**/.DS_Store": true
+        "**/.DS_Store": true,
+        "**/*.js": {"when": "$(basename).ts"},
+        "**/*.js.map": {"when": "$(basename)"}
     }, 
-    // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange". If set to "afterDelay" you can configure the delay in "files.autoSaveDelay".
-    "files.autoSave": "afterDelay"
+
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "tslint.rulesDirectory": "./node_modules/codelyzer",
+    
+    "emmet.syntaxProfiles": {
+        "javascript": "html",
+        "typescript": "html"
+    }
 }
